@@ -1,29 +1,32 @@
 # Mather
 
-Mather is an offline-first math equation puzzle built with React Native and Expo. Find the hidden eight-character equation in six attempts, play a daily puzzle based on your local calendar day, or solve unlimited random games.
+**Mather** is an offline-first math equation puzzle built with React Native and Expo. Find the hidden eight-character equation in six attempts, solve a daily puzzle based on the local calendar day, or keep playing unlimited random games.
 
 ## Features
 
-- Daily challenge refreshes at local midnight on each device
-- Unlimited random equations with correct operation precedence
-- Wordle-style duplicate-aware scoring
+- Daily challenge that refreshes at local midnight
+- Unlimited random equations with correct operator precedence
+- Wordle-style scoring with duplicate-aware cell evaluation
 - English and Turkish interfaces
-- Persistent light/dark theme and accessibility-friendly settings
+- Persistent light and dark themes
 - Haptic and animated feedback controls
-- Local statistics: games, wins, losses, streaks, cups, and guess distribution
+- Local games, wins, losses, streaks, trophies, and guess distribution
 - Resume-safe local game state using AsyncStorage
-- Privacy-friendly daily result sharing with emoji tiles only
-- Responsive layouts for small screens, tablets, web, and notched devices
-- No accounts, advertisements, analytics, or backend dependency
+- Emoji-only result sharing that keeps the equation private
+- Responsive layouts for phones, tablets, web, and notched devices
+
+## Orientation
+
+Phones open in portrait mode. Tablets support both portrait and landscape modes. The app detects the device class at runtime and applies the appropriate orientation policy.
 
 ## Tech stack
 
 - Expo SDK 57
-- React Native 0.86 / React 19
+- React Native 0.86 and React 19
 - React Navigation 7
 - AsyncStorage
-- Expo Haptics, Splash Screen, and Updates
-- Jest, ESLint, and TypeScript JavaScript checking
+- Expo Haptics, Splash Screen, Updates, and Screen Orientation
+- Jest, ESLint, and TypeScript checks
 
 ## Getting started
 
@@ -42,48 +45,19 @@ npm run ios
 npm run web
 ```
 
-If a physical device cannot reach Metro over the local network:
-
-```bash
-npx expo start --tunnel
-```
-
 ## Quality checks
 
 ```bash
-npm run lint
-npm run typecheck
-npm test
 npm run check
 ```
 
-The test suite covers equation generation and validation, duplicate-aware cell scoring, local date boundaries, countdown formatting, and share-grid output.
+The tests cover equation generation and validation, duplicate-aware scoring, local date boundaries, countdown formatting, and share-grid output.
 
-## Daily puzzle and time model
+## Daily puzzle and privacy
 
-Daily equations are generated deterministically from the device's local calendar date. This lets each country move to its next puzzle at local midnight and requires no server. Because the app is fully offline, deliberate device-clock manipulation cannot be prevented completely without using a trusted network time source.
+Daily equations are generated deterministically from each device's local calendar date. All progress, statistics, and preferences remain in AsyncStorage. The app has no account, advertising, analytics, or backend dependency.
 
-## Local data and privacy
-
-All progress, statistics, and preferences remain in AsyncStorage on the device. Result sharing opens the native share sheet and does not include the secret equation. See [Privacy Policy](./PRIVACY.md) and [Terms of Use](./TERMS.md).
-
-## EAS Build and Update
-
-Build profiles are defined in `eas.json`:
-
-- `development`: internal development client
-- `preview`: internal QA build on the `preview` update channel
-- `production`: store build on the `production` update channel
-
-The runtime version follows the app version, so native dependency changes require a new binary. After linking the repository to an Expo account, finish the account-specific setup with:
-
-```bash
-npx eas-cli@latest update:configure
-npx eas-cli@latest build --profile preview --platform android
-npx eas-cli@latest update --channel preview --environment preview --message "Preview update"
-```
-
-The generated Expo project ID and update URL are account-owned values and must not be fabricated or copied from another project.
+See [PRIVACY.md](./PRIVACY.md) and [TERMS.md](./TERMS.md) for the included legal pages.
 
 ## Project structure
 
@@ -98,7 +72,3 @@ src/theme/        Design tokens
 src/utils/        Result-sharing helpers
 __tests__/        Automated logic tests
 ```
-
-## License
-
-Copyright © 2026. No open-source license has been granted yet.

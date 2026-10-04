@@ -1,6 +1,7 @@
 import "react-native-gesture-handler";
 import * as React from "react";
-import { Animated, Easing } from "react-native";
+import { Animated, Dimensions, Easing, Platform } from "react-native";
+import * as ScreenOrientation from "expo-screen-orientation";
 import { StatusBar } from "expo-status-bar";
 import { DarkTheme, DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -69,6 +70,24 @@ function MainApp() {
 }
 
 export default function App() {
+  React.useEffect(() => {
+    if (Platform.OS === "web") {
+      return undefined;
+    }
+
+    const { width, height } = Dimensions.get("window");
+    const isTablet = Platform.OS === "ios"
+      ? Platform.isPad
+      : Math.min(width, height) >= 600;
+
+    const orientationTask = isTablet
+      ? ScreenOrientation.unlockAsync()
+      : ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
+
+    orientationTask.catch(() => undefined);
+    return undefined;
+  }, []);
+
   return (
     <SafeAreaProvider>
       <ThemeProvider>

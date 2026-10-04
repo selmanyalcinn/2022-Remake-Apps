@@ -1,49 +1,67 @@
-# Beşte Beş
+# Beste Bes
 
-Beşte Beş, Expo ve React Native ile geliştirilen çevrimdışı bir Türkçe kelime bulmacasıdır. Günlük ortak kelimeyi veya sınırsız rastgele oyunları altı denemede çözmeyi amaçlar.
+**Beste Bes** is an offline Turkish word puzzle built with React Native and Expo. Find the hidden five-letter word in six attempts, return for a new daily challenge, or keep playing unlimited games without an account or network connection.
 
-## Özellikler
+## Features
 
-- Yerel takvime göre günlük bulmaca ve gece yarısı geri sayımı
-- Sınırsız rastgele oyun ve kaldığın yerden devam etme
-- Çift harfleri doğru değerlendiren Wordle puanlaması
-- Türkçe ve İngilizce arayüz
-- Kalıcı açık/koyu tema ve titreşim ayarı
-- Yerel istatistikler, seriler, kupalar ve tahmin dağılımı
-- Gizli kelimeyi açıklamayan emoji sonuç paylaşımı
-- Telefon, küçük ekran, tablet ve web için responsive düzen
-- Hesap, reklam, analiz ve backend gerektirmeyen offline-first yapı
+- Daily puzzle that refreshes at local midnight
+- Unlimited random games with resume support
+- Wordle-style scoring with correct duplicate-letter handling
+- Turkish and English interface copy
+- Light and dark themes with persistent preferences
+- Haptic feedback and subtle transitions
+- Local statistics, streaks, trophies, and guess distribution
+- Emoji result sharing without revealing the answer
+- Static, offline dictionary data generated from Turkish dictionary sources
 
-## Çevrimdışı kelime verisi
+## Orientation
 
-Tahmin sözlüğü ve hedef havuzu, Güncel Türkçe Sözlük 12. baskısından build
-sırasında üretilir ve uygulamaya statik olarak gömülür. Uygulama çalışırken
-internet bağlantısı, API, backend veya cihaz içi veritabanı kullanmaz.
+Phones open in portrait mode. Tablets support both portrait and landscape layouts. The responsive game board is designed for small phones, larger tablets, and the web.
 
-- Geçerli tahmin listesi özel ad olmayan 5 harfli sözlük maddelerini kapsar.
-- Hedef listesi ayrıca yalnızca ağız, eskimiş, argo veya kaba kullanım anlamı
-  bulunan maddeleri eler.
-- Kaynak ve lisans bilgileri `THIRD_PARTY_NOTICES.md` dosyasındadır.
+## Tech stack
 
-Kaynak JSON güncellendiğinde veri paketi şöyle yeniden üretilebilir:
+- Expo SDK 57
+- React Native 0.86 and React 19
+- React Navigation 7
+- AsyncStorage for local progress and preferences
+- Expo Haptics, Updates, Splash Screen, and Screen Orientation
+- Jest, ESLint, and TypeScript checks
 
-```bash
-npm run words:generate -- /path/to/gts.json
-```
+## Getting started
 
-## Çalıştırma
-
-Node.js 22.13 veya üzeri gerekir.
+Requirements: Node.js 22.13 or newer and npm.
 
 ```bash
 npm install
 npm start
 ```
 
-## Kalite kontrolleri
+Platform shortcuts:
+
+```bash
+npm run android
+npm run ios
+npm run web
+```
+
+## Quality checks
 
 ```bash
 npm run check
 ```
 
-EAS geliştirme, önizleme ve production profilleri `eas.json` içinde tanımlıdır. Expo projesi hesaba bağlandıktan sonra EAS Update proje kimliği ve URL’si Expo tarafından oluşturulmalıdır.
+This runs linting, TypeScript validation, and the Jest test suite.
+
+## Dictionary generation
+
+The runtime dictionary is bundled with the app, so gameplay does not need an API or backend. When the source JSON is updated, regenerate the static data with:
+
+```bash
+npm run words:generate -- /path/to/gts.json
+```
+
+The generated word lists, filtering rules, and attribution details are documented in [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
+
+## Privacy
+
+Game progress, preferences, and statistics stay on the device. The app does not require accounts, analytics, advertising, or a backend. See [PRIVACY.md](./PRIVACY.md) and [TERMS.md](./TERMS.md) for the legal pages included in the project.

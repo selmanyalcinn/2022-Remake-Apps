@@ -3,7 +3,7 @@
     "name": "Doday54",
     "slug": "Doday54",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "doday54",
     "ios": {
@@ -38,6 +38,7 @@
       ],
       "expo-font",
       "expo-image",
+      "expo-screen-orientation",
       "expo-status-bar",
       "expo-web-browser"
     ],

@@ -18,6 +18,7 @@
     "plugins": [
       "expo-font",
       "expo-asset",
+      "expo-screen-orientation",
       "expo-status-bar"
     ],
     "extra": {

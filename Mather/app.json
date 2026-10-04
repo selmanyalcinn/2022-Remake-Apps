@@ -6,7 +6,7 @@
     "version": "1.0.0",
     "slug": "mather-app-slug",
     "scheme": "mather",
-    "orientation": "portrait",
+    "orientation": "default",
     "userInterfaceStyle": "automatic",
     "runtimeVersion": {
       "policy": "appVersion"
@@ -34,6 +34,7 @@
     },
     "plugins": [
       "expo-font",
+      "expo-screen-orientation",
       "expo-status-bar",
       [
         "expo-splash-screen",

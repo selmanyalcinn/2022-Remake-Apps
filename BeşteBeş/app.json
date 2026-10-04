@@ -35,6 +35,7 @@
     "plugins": [
       "expo-status-bar",
       "expo-font",
+      "expo-screen-orientation",
       [
         "expo-splash-screen",
         {

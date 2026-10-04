@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Mather",
+    "description": "A polished daily and unlimited math equation puzzle.",
+    "icon": "./assets/icon.png",
+    "version": "1.0.0",
+    "slug": "mather-app-slug",
+    "scheme": "mather",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
+    },
+    "ios": {
+      "bundleIdentifier": "mather.selmanyalcin.mather",
+      "buildNumber": "1",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "mather.selmanyalcin.mather",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#121212"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-status-bar",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "imageWidth": 260,
+          "resizeMode": "contain",
+          "backgroundColor": "#121212",
+          "dark": {
+            "image": "./assets/splash.png",
+            "backgroundColor": "#121212"
+          }
+        }
+      ]
+    ]
+  }
+}

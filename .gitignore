@@ -1,0 +1,17 @@
+.nested-git-backup/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Common generated/dependency directories
+node_modules/
+.expo/
+dist/
+web-build/
+.vercel/
+
+# OS/editor files
+.DS_Store
+*.log

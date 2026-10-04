@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Qode",
+    "slug": "selmanyalcinn",
+    "orientation": "portrait",
+    "version": "1.0.0",
+    "icon": "./icon.png",
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Camera permission is required to scan QR codes."
+        }
+      ],
+      "expo-font",
+      "expo-asset",
+      "expo-status-bar"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.selmanyalcin.qode",
+      "supportsTablet": true,
+      "requireFullScreen": true,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.selmanyalcin.qode",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bccc056d-997e-445b-a194-2a32d54fab8c"
+      }
+    },
+    "owner": "yalcinse26s-team"
+  }
+}

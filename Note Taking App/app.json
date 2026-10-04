@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Pinote",
+    "icon": "Icon2.png",
+    "version": "1.0.0",
+    "slug": "NoteApp",
+    "orientation": "default",
+    "ios": {
+      "bundleIdentifier": "noteapp.selmanyalcin.noteapp",
+      "buildNumber": "1.0.0",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "noteapp.selmanyalcin.noteapp",
+      "versionCode": 1,
+      "permissions": []
+    },
+    "plugins": [
+      "expo-font",
+      "expo-asset",
+      "expo-status-bar"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "3236e7d4-0efa-49d5-a584-3f789596a4d2"
+      }
+    }
+  }
+}

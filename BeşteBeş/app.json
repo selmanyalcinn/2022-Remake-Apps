@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Beşte Beş",
+    "description": "Günlük ve sınırsız modları olan çevrimdışı Türkçe kelime bulmacası.",
+    "slug": "beste-bes",
+    "version": "1.0.0",
+    "scheme": "bestebes",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0
+    },
+    "ios": {
+      "bundleIdentifier": "com.selmanyalcin.bestebes",
+      "buildNumber": "1",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.selmanyalcin.bestebes",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#121A18",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-status-bar",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 240,
+          "resizeMode": "contain",
+          "backgroundColor": "#121A18",
+          "dark": {
+            "image": "./assets/splash-icon.png",
+            "backgroundColor": "#121A18"
+          }
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Cryptic",
+    "icon": "./assets/icon.png",
+    "version": "2.0.0",
+    "slug": "cryptic",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "cryptocurrencyapp.selmanyalcin.cryptocurrencyapp",
+      "buildNumber": "2.0.0"
+    },
+    "android": {
+      "package": "cryptocurrencyapp.selmanyalcin.cryptocurrencyapp",
+      "versionCode": 1,
+      "permissions": [],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F172A"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-screen-orientation",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "resizeMode": "cover",
+          "backgroundColor": "#000000"
+        }
+      ]
+    ]
+  }
+}

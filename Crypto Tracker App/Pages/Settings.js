@@ -225,12 +225,15 @@ export default function Settings({ navigation }) {
             <View style={[styles.RowIcon, { backgroundColor: theme.searchBg }]}>
               <Ionicons name="server-outline" size={19} color={theme.subtext} />
             </View>
-            <View>
+            <View style={styles.InfoContent}>
               <Text style={[styles.RowCaption, { color: theme.subtext }]}>
                 {t("dataSource")}
               </Text>
               <Text style={[styles.InfoValue, { color: theme.text }]}>
                 CoinGecko
+              </Text>
+              <Text style={[styles.RowCaption, { color: theme.subtext }]}>
+                {t("financialDisclaimer")}
               </Text>
             </View>
           </View>
@@ -245,12 +248,12 @@ export default function Settings({ navigation }) {
                 color={theme.subtext}
               />
             </View>
-            <View>
+            <View style={styles.InfoContent}>
               <Text style={[styles.RowCaption, { color: theme.subtext }]}>
                 {t("version")}
               </Text>
               <Text style={[styles.InfoValue, { color: theme.text }]}>
-                2.0.0
+                2.0.1
               </Text>
             </View>
           </View>
@@ -335,8 +338,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  RowCaption: { fontSize: 12, marginTop: 2 },
-  InfoCard: { borderRadius: 16, borderWidth: 1, paddingHorizontal: 14 },
+  RowCaption: { fontSize: 12, lineHeight: 17, marginTop: 2 },
+  InfoCard: {
+    borderRadius: 16,
+    borderWidth: 1,
+    paddingHorizontal: 14,
+    marginBottom: 26,
+  },
+  InfoContent: { flex: 1, paddingVertical: 12 },
   InfoRow: {
     minHeight: 64,
     flexDirection: "row",

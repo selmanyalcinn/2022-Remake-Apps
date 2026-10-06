@@ -1,6 +1,6 @@
-# Pinote
+# Noto
 
-**Pinote** is a lightweight note-taking app for capturing ideas quickly and keeping them available offline. Its focused editor and uncluttered list make it useful for short notes, reminders, and everyday thoughts.
+**Noto** is a lightweight note-taking app for capturing ideas quickly and keeping them available offline. Its focused editor and uncluttered list make it useful for short notes, reminders, and everyday thoughts.
 
 ## Features
 
@@ -50,7 +50,7 @@ The test suite covers note serialization, normalization, identifiers, and legacy
 
 ## Privacy
 
-Notes stay on the device. Pinote does not use an account, analytics, advertising, or a remote notes service.
+Notes stay on the device. Noto does not use an account, analytics, advertising, or a remote notes service.
 
 ## Demo
 

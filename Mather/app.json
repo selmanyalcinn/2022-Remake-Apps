@@ -24,7 +24,7 @@
       "package": "mather.selmanyalcin.mather",
       "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/adaptive-icon-safe.png",
         "backgroundColor": "#121212"
       }
     },
@@ -49,6 +49,11 @@
           }
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "9537bddc-b097-45e1-9b64-67cb25c70c15"
+      }
+    }
   }
 }

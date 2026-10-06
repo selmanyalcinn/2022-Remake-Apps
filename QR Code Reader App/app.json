@@ -3,13 +3,14 @@
     "name": "Qode",
     "slug": "selmanyalcinn",
     "orientation": "portrait",
-    "version": "1.0.0",
-    "icon": "./icon.png",
+    "version": "1.0.2",
+    "icon": "./assets/qode-icon.png",
     "plugins": [
       [
         "expo-camera",
         {
-          "cameraPermission": "Camera permission is required to scan QR codes."
+          "cameraPermission": "Camera permission is required to scan QR codes.",
+          "recordAudioAndroid": false
         }
       ],
       "expo-font",
@@ -26,12 +27,17 @@
     },
     "android": {
       "package": "com.selmanyalcin.qode",
-      "versionCode": 1,
+      "versionCode": 3,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/qode-adaptive-foreground.png",
+        "backgroundColor": "#0B0F17"
+      },
       "permissions": [
-        "CAMERA",
-        "android.permission.CAMERA",
-        "android.permission.RECORD_AUDIO"
+        "CAMERA"
       ]
+    },
+    "web": {
+      "favicon": "./assets/qode-icon.png"
     },
     "extra": {
       "eas": {

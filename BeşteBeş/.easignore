@@ -1,0 +1,32 @@
+# Dependencies and local Expo state
+node_modules/
+.expo/
+
+# Generated build output
+dist/
+web-build/
+expo-env.d.ts
+/releases/
+
+# Native and local credentials
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.pem
+
+# Generated native folders
+/ios/
+/android/
+
+# Logs, local environment files, and editor metadata
+.metro-health-check*
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.env*.local
+*.tsbuildinfo
+.DS_Store

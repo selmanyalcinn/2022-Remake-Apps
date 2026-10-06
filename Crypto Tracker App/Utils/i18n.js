@@ -56,6 +56,10 @@ const translations = {
     currency: "Para birimi",
     dataSource: "Veri kaynağı",
     version: "Sürüm",
+    legal: "Yasal",
+    privacyPolicy: "Gizlilik Politikası",
+    termsOfUse: "Kullanım Koşulları",
+    financialDisclaimer: "Yalnızca bilgi amaçlıdır; yatırım tavsiyesi değildir.",
     chartPeriod: "{period} grafik dönemi",
   },
   en: {
@@ -115,6 +119,10 @@ const translations = {
     currency: "Currency",
     dataSource: "Data source",
     version: "Version",
+    legal: "Legal",
+    privacyPolicy: "Privacy Policy",
+    termsOfUse: "Terms of Use",
+    financialDisclaimer: "For information only; not financial advice.",
     chartPeriod: "{period} chart period",
   },
 };

@@ -22,9 +22,8 @@
     },
     "android": {
       "package": "com.selmanyalcin.bestebes",
-      "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#121A18",
+        "backgroundColor": "#121212",
         "foregroundImage": "./assets/android-icon-foreground.png"
       }
     },
@@ -42,13 +41,19 @@
           "image": "./assets/splash-icon.png",
           "imageWidth": 240,
           "resizeMode": "contain",
-          "backgroundColor": "#121A18",
+          "backgroundColor": "#121212",
           "dark": {
             "image": "./assets/splash-icon.png",
-            "backgroundColor": "#121A18"
+            "backgroundColor": "#121212"
           }
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "163fbc35-7e23-4b78-affa-930db3f1a99c"
+      }
+    },
+    "owner": "yalcinse26"
   }
 }

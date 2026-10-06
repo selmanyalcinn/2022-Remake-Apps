@@ -1,6 +1,6 @@
-# Doday
+# Tudu
 
-**Doday** is a calm, local-first task manager for turning everyday plans into a clear, searchable list. It is designed around quick capture, useful organization, and reliable offline persistence.
+**Tudu** is a calm, local-first task manager for turning everyday plans into a clear, searchable list. It is designed around quick capture, useful organization, and reliable offline persistence.
 
 ## Features
 

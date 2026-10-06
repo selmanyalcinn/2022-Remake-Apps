@@ -5,7 +5,7 @@
  */
 export const getChangeColor = (value, neutralColor = "#64748B") => {
   if (!Number.isFinite(value) || value === 0) return neutralColor;
-  return value > 0 ? "#16A34A" : "#DC2626";
+  return value > 0 ? "#14B8A6" : "#F43F5E";
 };
 
 export const formatPrice = (value, symbol = "") => {

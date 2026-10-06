@@ -494,7 +494,7 @@ function AppContent() {
       <SafeAreaView edges={["top"]} style={styles.headerSafeArea}>
         <View style={styles.header}>
           <View>
-            <Text style={styles.headerTitle}>Pinote</Text>
+            <Text style={styles.headerTitle}>Noto</Text>
             <Text style={styles.headerSubtitle}>
               {notes.length} {notes.length === 1 ? "note" : "notes"}
             </Text>

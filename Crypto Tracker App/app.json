@@ -2,22 +2,21 @@
   "expo": {
     "name": "Cryptic",
     "icon": "./assets/icon.png",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "slug": "cryptic",
     "orientation": "default",
     "userInterfaceStyle": "automatic",
     "ios": {
       "bundleIdentifier": "cryptocurrencyapp.selmanyalcin.cryptocurrencyapp",
-      "buildNumber": "2.0.0",
+      "buildNumber": "2.0.1",
       "supportsTablet": true
     },
     "android": {
       "package": "cryptocurrencyapp.selmanyalcin.cryptocurrencyapp",
-      "versionCode": 1,
       "permissions": [],
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0F172A"
+        "foregroundImage": "./assets/adaptive-icon-safe.png",
+        "backgroundColor": "#050914"
       }
     },
     "web": {
@@ -30,10 +29,17 @@
         "expo-splash-screen",
         {
           "image": "./assets/splash.png",
-          "resizeMode": "cover",
-          "backgroundColor": "#000000"
+          "resizeMode": "contain",
+          "imageWidth": 260,
+          "backgroundColor": "#050914"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "bc9ce230-fc20-42f3-a51f-0b0a1fb0128a"
+      }
+    },
+    "owner": "yalcinse26"
   }
 }

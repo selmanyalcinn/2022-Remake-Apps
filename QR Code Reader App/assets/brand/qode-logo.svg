@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Qode logo</title>
+  <desc id="desc">A vivid green Q formed by four QR scanner corners on a dark background.</desc>
+  <rect width="1024" height="1024" fill="#0B0F17"/>
+  <g fill="none" stroke="#59C639" stroke-width="84" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M452 258H350c-51 0-92 41-92 92v102"/>
+    <path d="M572 258h102c51 0 92 41 92 92v102"/>
+    <path d="M258 572v102c0 51 41 92 92 92h102"/>
+    <path d="M766 572v102c0 51-41 92-92 92H572"/>
+    <path d="M724 724l116 116"/>
+  </g>
+  <rect x="466" y="466" width="92" height="92" rx="20" fill="#59C639"/>
+</svg>

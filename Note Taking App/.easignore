@@ -1,0 +1,20 @@
+node_modules/
+.expo/
+dist/
+web-build/
+release/
+coverage/
+tests/
+*.log
+*.apk
+*.aab
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+.DS_Store
+
+# Source artwork is kept in git but is not consumed by the native build.
+assets/brand/

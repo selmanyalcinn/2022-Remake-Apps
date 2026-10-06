@@ -29,7 +29,7 @@ export default function Header({
         <View style={styles.topRow}>
           <View>
             <Text style={styles.dateText}>{getFormattedDate()}</Text>
-            <Text style={styles.greetingText}>doday</Text>
+            <Text style={styles.greetingText}>Tudu</Text>
           </View>
           <View style={styles.badgeContainer}>
             <View style={styles.badge}>

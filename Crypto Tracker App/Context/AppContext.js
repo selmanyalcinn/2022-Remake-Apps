@@ -15,9 +15,9 @@ const AppContext = createContext({});
 
 export function AppProvider({ children }) {
   const colorScheme = useColorScheme();
-  // New installs start in the most accessible configuration. User choices
-  // are restored from storage below once the provider is ready.
-  const [themeMode, setThemeMode] = useState("light");
+  // Yeni kurulumlar marka paletiyle uyumlu koyu temada başlar. Kayıtlı
+  // kullanıcı tercihi aşağıda depodan geri yüklenmeye devam eder.
+  const [themeMode, setThemeMode] = useState("dark");
   const [language, setLanguage] = useState("en");
   const isDark = themeMode === "dark" || (themeMode === "system" && colorScheme === "dark");
   const theme = isDark ? darkTheme : lightTheme;

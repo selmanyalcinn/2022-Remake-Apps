@@ -1,9 +1,10 @@
 {
   "expo": {
-    "name": "Pinote",
-    "icon": "Icon2.png",
+    "name": "Noto",
+    "icon": "./assets/noto-icon.png",
     "version": "1.0.0",
-    "slug": "NoteApp",
+    "slug": "noto",
+    "owner": "yalcinse26",
     "orientation": "default",
     "ios": {
       "bundleIdentifier": "noteapp.selmanyalcin.noteapp",
@@ -11,9 +12,22 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "noteapp.selmanyalcin.noteapp",
+      "package": "com.yalcinse26.noto",
       "versionCode": 1,
-      "permissions": []
+      "permissions": [],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "icon": "./assets/noto-icon.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/noto-adaptive-foreground.png",
+        "monochromeImage": "./assets/noto-monochrome.png",
+        "backgroundColor": "#FBDB04"
+      }
+    },
+    "web": {
+      "favicon": "./assets/noto-favicon.png"
     },
     "plugins": [
       "expo-font",
@@ -23,7 +37,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "3236e7d4-0efa-49d5-a584-3f789596a4d2"
+        "projectId": "b617c289-f3ae-4e24-9cf5-7ffc469cbcab"
       }
     }
   }

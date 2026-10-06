@@ -1,38 +1,44 @@
 {
   "expo": {
-    "name": "Doday54",
-    "slug": "Doday54",
+    "name": "Tudu",
+    "slug": "tudu",
+    "owner": "yalcinse26",
     "version": "1.0.0",
     "orientation": "default",
-    "icon": "./assets/images/icon.png",
-    "scheme": "doday54",
+    "icon": "./assets/images/tudu-icon.png",
+    "scheme": "tudu",
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "package": "com.doday.app",
+      "icon": "./assets/images/tudu-icon.png",
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "backgroundColor": "#FBDB04",
+        "foregroundImage": "./assets/images/tudu-adaptive-foreground.png",
+        "monochromeImage": "./assets/images/tudu-monochrome.png"
       },
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/tudu-favicon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/tudu-splash.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#FBDB04",
           "dark": {
-            "backgroundColor": "#000000"
+            "backgroundColor": "#FBDB04"
           }
         }
       ],
@@ -49,7 +55,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "c1350831-509e-4033-8566-55e05addf7c4"
+        "projectId": "e20a09a9-7af2-4480-9887-1235404b966a"
       }
     }
   }

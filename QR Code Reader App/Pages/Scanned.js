@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { MaterialIcons, Ionicons } from "@expo/vector-icons";
+const { isWebUrl, normalizeWebUrl } = require("../utils/links");
 
 export default function Scanned({ route, navigation }) {
   const data = route.params?.data || "";
@@ -19,26 +20,23 @@ export default function Scanned({ route, navigation }) {
   const handleOpenLink = async () => {
     if (!data) return;
 
-    let targetUrl = data.trim();
-    if (
-      !targetUrl.toLowerCase().startsWith("http://") &&
-      !targetUrl.toLowerCase().startsWith("https://")
-    ) {
-      targetUrl = "https://" + targetUrl;
+    const targetUrl = normalizeWebUrl(data);
+
+    if (!targetUrl) {
+      Alert.alert(
+        "Invalid Link",
+        "This content is not a valid HTTP or HTTPS web link:\n" + data,
+      );
+      return;
     }
 
     try {
-      const supported = await Linking.canOpenURL(targetUrl);
-      if (supported) {
-        await Linking.openURL(targetUrl);
-      } else {
-        Alert.alert(
-          "Invalid Link",
-          "This content could not be opened as a web link:\n" + data,
-        );
-      }
+      await Linking.openURL(targetUrl);
     } catch (error) {
-      Alert.alert("Error", "Could not open link: " + error.message);
+      Alert.alert(
+        "Unable to Open Link",
+        "No browser could open this link:\n" + targetUrl,
+      );
     }
   };
 
@@ -53,15 +51,7 @@ export default function Scanned({ route, navigation }) {
     }
   };
 
-  const trimmedData = data.trim();
-  const lowerData = trimmedData.toLowerCase();
-  const isUrl =
-    lowerData.startsWith("http://") ||
-    lowerData.startsWith("https://") ||
-    lowerData.startsWith("www.") ||
-    (lowerData.includes(".") &&
-      !lowerData.includes(" ") &&
-      lowerData.length > 4);
+  const isUrl = isWebUrl(data);
 
   return (
     <View style={styles.container}>
